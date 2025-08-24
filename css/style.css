@@ -269,7 +269,7 @@ a:focus {
   position: relative;
   padding: 45px 0 145px 0;
   /* Change to solid color */
-  background-color: #f8f9fa; /* Light gray */
+  background-color: #383838; /* Light gray */
 }
 
 .slider_section .row {
