@@ -1,0 +1,13 @@
+/* src/components/Footer.css */
+
+.footer {
+  background-color: var(--color-text-dark);
+  color: var(--color-text-light);
+  padding: var(--spacing-md) 0;
+  font-size: var(--font-size-sm);
+}
+
+.footer p {
+    color: var(--color-text-light);
+    margin: 0;
+}

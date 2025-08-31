@@ -1,0 +1,57 @@
+/* src/components/Header.css */
+.header {
+  background-color: var(--color-background-light); /* Fundo branco para o cabeçalho */
+  border-bottom: 1px solid var(--color-border); /* Linha sutil na parte inferior */
+  padding: var(--spacing-md) 0; /* Padding vertical */
+  position: sticky; /* Fixa o cabeçalho no topo ao rolar */
+  top: 0;
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* O padding lateral já é dado pelo .container global. Ajuste se necessário. */
+  padding: 0 var(--spacing-md); /* Apenas para alinhar com o conteúdo principal */
+}
+
+.header .logo {
+  font-weight: 700; /* Negrito */
+  font-size: var(--font-size-lg); /* Tamanho maior para a logo */
+  color: var(--color-cilab-primary); /* Cor primária para o texto da logo */
+  display: flex; /* Para alinhar o texto com um possível ícone */
+  align-items: center;
+  gap: var(--spacing-sm); /* Espaço entre ícone e texto */
+}
+
+.header .logo-icon {
+    height: 30px; /* Tamanho do ícone da logo */
+    width: auto;
+}
+
+.header .nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-lg); /* Espaçamento entre os itens do menu */
+}
+
+.header .nav a {
+  color: var(--color-text-dark); /* Texto do menu escuro */
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: var(--spacing-xs) var(--spacing-sm); /* Para aumentar a área clicável */
+}
+
+.header .nav a:hover {
+  color: var(--color-cilab-primary); /* Hover com a cor primária */
+}
+
+/* Responsividade para o menu */
+@media (max-width: 768px) {
+    .header .nav {
+        display: none; /* Esconde o menu de navegação em telas menores */
+        /* Futuramente, podemos adicionar um botão de hambúrguer para mostrar/esconder */
+    }
+}

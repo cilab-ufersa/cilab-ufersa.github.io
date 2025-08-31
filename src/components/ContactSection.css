@@ -1,0 +1,24 @@
+/* src/components/ContactSection.css */
+
+.contact-section {
+    background-color: var(--color-cilab-primary);
+    color: var(--color-text-light);
+    padding: var(--spacing-xl) 0;
+}
+
+.contact-section .section-title,
+.contact-section .section-description {
+    color: var(--color-text-light);
+}
+
+.contact-section .button {
+    background-color: var(--color-text-light);
+    color: var(--color-cilab-primary);
+    border-color: var(--color-text-light);
+}
+
+.contact-section .button:hover {
+    background-color: var(--color-text-dark);
+    color: var(--color-text-light);
+    border-color: var(--color-text-dark);
+}

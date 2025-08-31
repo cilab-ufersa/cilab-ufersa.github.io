@@ -1,0 +1,163 @@
+/* src/components/HeroSection.css */
+
+.hero-section {
+  text-align: center;
+  padding: var(--spacing-xxl) var(--spacing-md);
+  background-color: var(--color-background-off-white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* <<-- Estilos para o wrapper de conteúdo e layout Flexbox -->> */
+.hero-content-wrapper {
+    display: flex;
+    flex-direction: column; /* Padrão para mobile: texto e imagem empilhados */
+    align-items: center; /* Centraliza itens na coluna (horizontalmente) */
+    justify-content: center; /* Centraliza itens na coluna (verticalmente, se houver espaço) */
+    gap: var(--spacing-xl); /* Espaçamento entre o texto e a imagem em mobile */
+}
+
+@media (min-width: 992px) { /* Em telas maiores, coloca lado a lado */
+    .hero-content-wrapper {
+        flex-direction: row; /* Layout em linha */
+        justify-content: space-between; /* Espaço entre os itens (texto e imagem) */
+        text-align: left; /* Alinha o texto à esquerda */
+        gap: var(--spacing-xxl); /* Mais espaço em telas maiores */
+        align-items: center; /* Alinha verticalmente no centro */
+    }
+    .hero-text-content { /* Wrapper do título, subtítulo e botões */
+        flex: 1; /* Ocupa o espaço restante */
+        max-width: 60%; /* Limita a largura do bloco de texto para não esticar demais */
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+    .hero-illustration-wrapper { /* Wrapper da imagem */
+        flex-shrink: 0; /* Impede que a imagem encolha */
+        /* <<-- AJUSTE ESTE TAMANHO CONFORME A SUA IMAGEM GERADA -->> */
+        width: 400px; /* Largura para a ilustração em desktop (exemplo) */
+        max-width: 40%; /* Garante que não exceda uma % da largura do wrapper */
+    }
+}
+
+
+/* Estilos para o Título (onde o Typewriter está) */
+.hero-title {
+  font-size: var(--font-size-h1); /* Padrão para desktop */
+  color: var(--color-cilab-primary);
+  margin-bottom: var(--spacing-md);
+  max-width: 800px;
+  text-align: inherit; /* Herda o text-align do pai */
+  min-height: calc(var(--font-size-h1) * 1.2); /* Garante altura mínima para o Typewriter e cursor */
+  display: block; /* Garante que o h1 ocupe sua própria linha */
+}
+
+/* Estilos específicos para o texto dentro do Typewriter */
+.hero-title .typewriter-text {
+    display: inline-block; /* Permite que o span tenha largura auto */
+    text-align: center; /* Centraliza o texto e o cursor dentro do span */
+    width: 100%; /* Ocupa 100% da largura disponível para centralizar o conteúdo */
+}
+
+@media (min-width: 992px) { /* Ajuste específico para desktop */
+    .hero-title .typewriter-text {
+        text-align: left; /* Alinha o Typewriter à esquerda em desktop */
+    }
+}
+
+
+.hero-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-grey);
+  margin-bottom: var(--spacing-xl);
+  max-width: 700px;
+  text-align: inherit;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center; /* Continua centralizado em mobile */
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 992px) { /* Alinha botões à esquerda em desktop */
+    .hero-actions {
+        justify-content: flex-start;
+    }
+}
+
+
+/* Botões (mantêm os estilos anteriores) */
+.button {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.button.primary {
+  background-color: var(--color-cilab-primary);
+  color: var(--color-text-light);
+  border-color: var(--color-cilab-primary);
+}
+
+.button.primary:hover {
+  background-color: #e65c4c;
+  border-color: #e65c4c;
+  text-decoration: none;
+}
+
+.button.secondary {
+  background-color: transparent;
+  color: var(--color-cilab-secondary);
+  border-color: var(--color-cilab-secondary);
+}
+
+.button.secondary:hover {
+  background-color: var(--color-cilab-secondary);
+  color: var(--color-text-light);
+  text-decoration: none;
+}
+
+/* Estilos da ilustração */
+.hero-illustration {
+    max-width: 100%; /* Garante que a imagem não ultrapasse seu container */
+    height: auto; /* Mantém a proporção */
+    display: block; /* Remove o espaço extra abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem no wrapper quando em coluna (mobile) */
+}
+
+
+/* <<-- RESPONSIVIDADE FINAL PARA O HERO -->> */
+@media (max-width: 991px) { /* Ajustes para tablets e celulares (abaixo de 992px) */
+    .hero-content-wrapper {
+        flex-direction: column; /* Volta para layout empilhado */
+        text-align: center; /* Centraliza todo o conteúdo */
+    }
+    .hero-text-content, .hero-illustration-wrapper {
+        max-width: 100%; /* Ocupa toda a largura disponível */
+        width: auto;
+    }
+    .hero-title {
+        font-size: var(--font-size-h2); /* Ajusta tamanho do título principal */
+        min-height: calc(var(--font-size-h2) * 1.2); /* Ajusta altura mínima */
+        text-align: center; /* Centraliza o título */
+    }
+    .hero-title .typewriter-text {
+        text-align: center; /* Centraliza o Typewriter */
+    }
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+        text-align: center;
+    }
+    .hero-actions {
+        flex-direction: column; /* Botões empilhados */
+    }
+}
+
+@media (max-width: 480px) { /* Ajuste para telas muito pequenas */
+    .hero-title {
+        font-size: 1.8rem;
+        min-height: calc(1.8rem * 1.2);
+    }
+}

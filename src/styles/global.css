@@ -1,0 +1,77 @@
+/* src/styles/global.css */
+
+/* Importação da fonte Inter do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+/* Importar as variáveis de cores e espaçamentos */
+@import './_variables.css';
+
+* {
+  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho final do elemento */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* Para rolagem suave com âncoras */
+}
+
+body {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text-dark);
+  background-color: var(--color-background-light); /* Fundo branco puro */
+  -webkit-font-smoothing: antialiased; /* Suaviza as fontes no Chrome/Safari */
+  -moz-osx-font-smoothing: grayscale; /* Suaviza as fontes no Firefox */
+}
+
+/* Estilos para títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-sans);
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
+h5 { font-size: var(--font-size-lg); }
+h6 { font-size: var(--font-size-base); }
+
+/* Estilos de parágrafo */
+p {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-dark);
+}
+
+/* Estilos de links */
+a {
+  color: var(--color-cilab-primary); /* Links com a cor primária */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-cilab-secondary); /* Hover com a cor secundária */
+  text-decoration: underline;
+}
+
+/* Container de conteúdo principal - MUITO IMPORTANTE para o minimalismo */
+.container {
+  max-width: 1200px; /* Largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza na tela */
+  padding: var(--spacing-xl) var(--spacing-md); /* Espaçamento interno vertical e horizontal */
+}
+
+/* Seções com padding vertical para separação */
+section {
+    padding: var(--spacing-xl) 0; /* Grandes espaços entre as seções */
+}
+
+/* Estilo para centralizar texto genericamente */
+.text-center {
+    text-align: center;
+}

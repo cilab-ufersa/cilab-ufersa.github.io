@@ -1,0 +1,33 @@
+/* src/styles/_variables.css */
+
+:root {
+  /* Cores do CILAB */
+  --color-cilab-primary: #f97142; /* Laranja atualizado */
+  --color-cilab-secondary: #2496c8; /* Azul esverdeado atualizado */
+
+  /* Cores Neutras (para background, texto, etc.) */
+  --color-background-light: #ffffff; /* Branco puro para fundos */
+  --color-background-off-white: #f8f9fa; /* Branco levemente acinzentado, como na referência */
+  --color-text-dark: #212529; /* Preto para a maioria dos textos */
+  --color-text-light: #ffffff; /* Branco para texto em fundos escuros */
+  --color-text-grey: #6c757d; /* Cinza para textos secundários/descrições */
+  --color-border: #e9ecef; /* Cinza claro para bordas/separadores */
+
+  /* Espaçamentos */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+  --spacing-xxl: 96px;
+
+  /* Fontes (Exemplo - Inter do Google Fonts) */
+  --font-family-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-size-base: 1rem; /* 16px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-h1: 3rem; /* 48px */
+  --font-size-h2: 2.25rem; /* 36px */
+  --font-size-h3: 1.75rem; /* 28px */
+  --font-size-h4: 1.5rem; /* 24px */
+}

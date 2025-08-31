@@ -1,0 +1,27 @@
+/* src/components/Typewriter.css */
+
+.typewriter-text {
+  font-family: var(--font-family-mono); /* Usa a fonte de terminal */
+  white-space: nowrap; /* Impede que o texto quebre automaticamente */
+  overflow: hidden; /* Esconde o texto que ainda não foi digitado ou já foi apagado */
+  display: inline-block; /* Permite que ele se ajuste ao conteúdo dentro do H1 */
+  vertical-align: middle; /* Alinha-o verticalmente */
+  max-width: 100%; /* Garante que ele não exceda o pai, fundamental para não cortar */
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 5px;
+  width: 2px; /* Largura da barra */
+  height: 1.2em; /* Altura da barra, ajuste para a altura da sua linha de texto */
+  background-color: var(--color-cilab-secondary); /* Cor da barra */
+  vertical-align: middle; /* Alinha a barra com o texto */
+  transition: opacity 0.5s ease-in-out; /* Transição suave para o efeito de piscar */
+}
+
+.typewriter-cursor.blinking {
+  opacity: 1;
+}
+.typewriter-cursor:not(.blinking) {
+  opacity: 0;
+}
