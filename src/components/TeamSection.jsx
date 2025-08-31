@@ -33,7 +33,7 @@ function TeamSection() {
     {
       id: 3,
       name: "Dra. Huliane",
-      role: "Pesquisadora em Ciência de Dados",
+      role: "Professora & Pesquisadora",
       expertise: "Aprendizado de Máquina não supervisionado, Clustering",
       image: "/huliane.png",
       links: {
