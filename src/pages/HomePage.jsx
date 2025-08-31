@@ -1,11 +1,12 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection';
 import InfoSection from '../components/InfoSection';
+import TeamSection from '../components/TeamSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
 // Importações dos ícones para usar nos dados dos cards
-import { faCode, faDatabase, faCloud, faLaptopCode, faShareNodes, faAtom, faLightbulb, faEye, faChartBar } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faDatabase, faCloud, faLaptopCode, faShareNodes, faAtom, faLightbulb, faEye, faChartBar, faHandsHelping, faBuilding, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 // Se HomePage.css estiver vazio, você pode comentar ou remover a linha abaixo.
 // import './HomePage.css';
@@ -35,26 +36,21 @@ function HomePage() {
     },
   ];
 
-  const networkTypesCards = [
+  const projectsCards = [
     {
-      title: "Redes Convolucionais (CNNs)",
-      description: "Processamento de imagens e reconhecimento visual, da classificação à segmentação.",
-      icon: faShareNodes,
+      title: "Língua de Sinais Brasileira (Libras)",
+      description: "Desenvolvimento de sistemas de reconhecimento e tradução de Libras usando técnicas de visão computacional e aprendizado de máquina para promover a inclusão de pessoas surdas.",
+      icon: faHandsHelping,
     },
     {
-      title: "Redes Recorrentes (RNNs) / LSTMs",
-      description: "Análise de sequências temporais, processamento de linguagem natural e séries financeiras.",
-      icon: faAtom,
+      title: "Detecção de Patologias em Edificações com IA",
+      description: "Aplicação de algoritmos de deep learning para identificar fissuras, rachaduras e outras patologias estruturais em edificações através de análise de imagens.",
+      icon: faBuilding,
     },
     {
-      title: "Transformers",
-      description: "Modelos avançados para PLN, tradução e geração de texto, base para LLMs.",
-      icon: faLightbulb,
-    },
-    {
-      title: "GANs e Autoencoders",
-      description: "Geração de conteúdo (imagens, áudio) e compressão/redução de dimensionalidade.",
-      icon: faCode,
+      title: "Saúde e Bem-estar Feminino",
+      description: "Desenvolvimento de soluções inteligentes para monitoramento e predição de aspectos relacionados à saúde feminina, incluindo ciclos menstruais e condições endócrinas.",
+      icon: faHeart,
     },
   ];
 
@@ -90,10 +86,10 @@ function HomePage() {
       />
 
       <InfoSection
-        id="network-types"
-        title="Tipos de Redes e Arquiteturas"
-        description="Especializamo-nos em diversas arquiteturas de redes neurais para atender a uma vasta gama de aplicações de IA."
-        cards={networkTypesCards}
+        id="projects"
+        title="Projetos do Laboratório"
+        description="Conheça os principais projetos desenvolvidos pelo CiLab, aplicando Inteligência Computacional para resolver problemas reais da sociedade."
+        cards={projectsCards}
         isAlternate={false}
       />
 
@@ -104,6 +100,8 @@ function HomePage() {
         cards={researchFocusCards}
         isAlternate={true}
       />
+
+      <TeamSection />
 
       <ContactSection />
       <Footer />

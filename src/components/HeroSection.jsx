@@ -3,7 +3,7 @@ import React from 'react';
 import './HeroSection.css';
 import Typewriter from './Typewriter';
 // <<-- CONFIRME O NOME DO ARQUIVO E A EXTENSÃO AQUI! -->>
-import HeroIllustration from '../assets/hero-illustration.png'; // Exemplo: ajuste se for .svg ou .jpg
+import HeroIllustration from '../assets/cilab.png'; // Exemplo: ajuste se for .svg ou .jpg
 
 function HeroSection() {
   const heroTexts = [
@@ -22,7 +22,7 @@ function HeroSection() {
             <Typewriter texts={heroTexts} />
           </h1>
           <p className="hero-subtitle">
-            Desenvolvemos soluções de IA de ponta para desafios do mundo real, focando em pesquisa, ética e impacto.
+            Desenvolvemos soluções de IA de para desafios do mundo real, focando em pesquisa, ética e impacto.
           </p>
           <div className="hero-actions">
             <a href="#what-we-use" className="button primary">
