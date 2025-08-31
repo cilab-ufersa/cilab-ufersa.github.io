@@ -1,0 +1,281 @@
+/* src/components/TeamSection.css */
+.team-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.section-title .highlight {
+  color: #FF7F00;
+  position: relative;
+}
+
+.section-title .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #FF7F00, #00FFFF);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.team-member-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #FF7F00, #00FFFF);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.team-member-card:hover::before {
+  transform: scaleX(1);
+}
+
+.team-member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.member-image-wrapper {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #f8f9fa;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.team-member-card:hover .member-image-wrapper {
+  border-color: #FF7F00;
+  box-shadow: 0 8px 25px rgba(255, 127, 0, 0.3);
+}
+
+.member-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.team-member-card:hover .member-image {
+  transform: scale(1.1);
+}
+
+.member-info {
+  margin-bottom: 20px;
+}
+
+.member-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.member-role {
+  font-size: 1rem;
+  color: #FF7F00;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.member-expertise {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.member-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.member-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  color: #666;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.member-link:hover {
+  background: #FF7F00;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.member-link:nth-child(1):hover { background: #1e90ff; }
+.member-link:nth-child(2):hover { background: #4285f4; }
+.member-link:nth-child(3):hover { background: #00d4aa; }
+.member-link:nth-child(4):hover { background: #0077b5; }
+
+.team-cta {
+  background: linear-gradient(135deg, #FF7F00, #00FFFF);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.team-cta h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.team-cta p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .button {
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.cta-buttons .button.primary {
+  background: white;
+  color: #FF7F00;
+}
+
+.cta-buttons .button.primary:hover {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.cta-buttons .button.secondary {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.cta-buttons .button.secondary:hover {
+  background: white;
+  color: #FF7F00;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .team-section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .team-member-card {
+    padding: 20px;
+  }
+  
+  .team-cta {
+    padding: 30px 20px;
+  }
+  
+  .team-cta h3 {
+    font-size: 1.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-buttons .button {
+    width: 200px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .member-image-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .member-name {
+    font-size: 1.1rem;
+  }
+}

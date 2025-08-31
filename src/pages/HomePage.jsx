@@ -1,6 +1,7 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection';
 import InfoSection from '../components/InfoSection';
+import TeamSection from '../components/TeamSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
@@ -104,6 +105,8 @@ function HomePage() {
         cards={researchFocusCards}
         isAlternate={true}
       />
+
+      <TeamSection />
 
       <ContactSection />
       <Footer />
