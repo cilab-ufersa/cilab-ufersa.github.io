@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header'; // Importa o componente Header
 import HomePage from './pages/HomePage';   // Importa o componente HomePage
 import PublicationsPage from './pages/PublicationsPage'; // Importa a página de publicações
+import LibrasProjectPage from './pages/LibrasProjectPage'; // Importa a página do projeto Libras
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -12,6 +13,8 @@ function App() {
       const hash = window.location.hash.slice(1);
       if (hash === 'publications') {
         setCurrentPage('publications');
+      } else if (hash === 'libras') {
+        setCurrentPage('libras');
       } else {
         setCurrentPage('home');
       }
@@ -27,6 +30,8 @@ function App() {
     switch (currentPage) {
       case 'publications':
         return <PublicationsPage />;
+      case 'libras':
+        return <LibrasProjectPage />;
       default:
         return (
           <div>

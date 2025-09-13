@@ -1,0 +1,236 @@
+/* src/pages/LibrasProjectPage.css */
+.libras-project-page {
+  min-height: 100vh;
+}
+
+.libras-hero {
+  background: linear-gradient(135deg, #FF7F00, #FF7F00);
+  color: white;
+  padding: 100px 0 60px;
+  text-align: center;
+}
+
+.libras-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.libras-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.libras-content {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.libras-content h2 {
+  font-size: 2.5rem;
+  color: #FF7F00;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.libras-content h3 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin: 40px 0 20px;
+  border-left: 4px solid #FF7F00;
+  padding-left: 20px;
+}
+
+.libras-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.libras-content ul {
+  margin: 20px 0;
+  padding-left: 30px;
+}
+
+.libras-content li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .libras-hero {
+    padding: 80px 0 40px;
+  }
+  
+  .libras-title {
+    font-size: 2.5rem;
+  }
+  
+  .libras-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .libras-content h2 {
+    font-size: 2rem;
+  }
+  
+  .libras-content h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .libras-title {
+    font-size: 2rem;
+  }
+  
+  .libras-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .libras-content h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Project Demo Section */
+.project-demo {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.project-demo h3 {
+  color: #FF7F00;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.demo-container {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+.demo-gif {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+.demo-description {
+  color: #666;
+  font-style: italic;
+  margin: 1rem 0 0 0;
+  line-height: 1.6;
+}
+
+/* Publications Section */
+.publications-section {
+  margin-top: 2rem;
+}
+
+/* Research Status Section */
+.research-status {
+  background: white;
+  border-left: 4px solid#FF7F00;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.research-status p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.research-status p:last-child {
+  margin-bottom: 0;
+}
+
+.publication-item {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #FF7F00;
+}
+
+.publication-item h4 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.publication-item .authors {
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.publication-item .venue {
+  color: #777;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.publication-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: linear-gradient(135deg, #FF7F00, #FFB366);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Responsive Design for new sections */
+@media (max-width: 768px) {
+  .demo-container {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .publication-item {
+    padding: 1.5rem;
+  }
+  
+  .publication-item h4 {
+    font-size: 1.2rem;
+  }
+  
+  .publication-tags {
+    justify-content: center;
+  }
+}

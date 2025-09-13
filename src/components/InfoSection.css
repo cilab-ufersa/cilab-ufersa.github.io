@@ -40,11 +40,26 @@
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .info-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.info-card.clickable {
+  cursor: pointer;
+}
+
+.info-card.clickable:hover {
+  border-color: var(--color-cilab-primary);
+}
+
+.info-card.clickable h3 {
+  color: var(--color-cilab-primary);
 }
 
 .info-card h3 {
