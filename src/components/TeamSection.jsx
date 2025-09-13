@@ -64,7 +64,7 @@ function TeamSection() {
             Nossa Equipe
           </h2>
           <p className="section-subtitle">
-            Conheça os pesquisadores que fazem do CiLab um centro de excelência em Inteligência Computacional
+            Nossas Pesquisadoras e Professoras 
           </p>
         </div>
 
