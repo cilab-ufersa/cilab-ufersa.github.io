@@ -1,5 +1,16 @@
 // src/components/TeamSection.jsx
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faIdCard, 
+  faGraduationCap, 
+  faFileAlt,
+  faUniversity 
+} from '@fortawesome/free-solid-svg-icons';
+import { 
+  faLinkedin, 
+  faResearchgate 
+} from '@fortawesome/free-brands-svg-icons';
 import './TeamSection.css';
 
 function TeamSection() {
@@ -11,10 +22,10 @@ function TeamSection() {
       expertise: "Deep Learning, Visão Computacional, Processamento de Imagens",
       image: "/rosana.jpeg",
       links: {
-        lattes: "#",
-        scholar: "#",
-        researchgate: "#",
-        linkedin: "#"
+        lattes: "https://lattes.cnpq.br/2921962829806332",
+        scholar: "https://scholar.google.com.br/citations?user=bqgZiT0AAAAJ&hl",
+        researchgate: "https://www.researchgate.net/profile/R-C-B-Rego",
+        linkedin: "https://www.linkedin.com/in/rosanacibely/"
       }
     },
     {
@@ -24,20 +35,20 @@ function TeamSection() {
       expertise: "Inteligência Artificial, Aprendizado de Máquina por Reforço",
       image: "/nathalee.png",
       links: {
-        lattes: "#",
+        lattes: "http://lattes.cnpq.br/4386227694627671",
         scholar: "#",
-        researchgate: "#",
+        researchgate: "https://www.researchgate.net/profile/Nathalee-Cavalcanti",
         linkedin: "#"
       }
     },
     {
       id: 3,
-      name: "Dra. Huliane",
+      name: "Dra. Huliane Medeiros",
       role: "Professora & Pesquisadora",
       expertise: "Aprendizado de Máquina não supervisionado, Clustering",
       image: "/huliane.png",
       links: {
-        lattes: "#",
+        lattes: "http://lattes.cnpq.br/1797223363490431",
         scholar: "#",
         researchgate: "#",
         linkedin: "#"
@@ -78,16 +89,16 @@ function TeamSection() {
                 
                 <div className="member-links">
                   <a href={member.links.lattes} title="Currículo Lattes" className="member-link">
-                    <i className="fas fa-id-card"></i>
+                    <FontAwesomeIcon icon={faFileAlt} />
                   </a>
                   <a href={member.links.scholar} title="Google Scholar" className="member-link">
-                    <i className="fas fa-graduation-cap"></i>
+                    <FontAwesomeIcon icon={faGraduationCap} />
                   </a>
                   <a href={member.links.researchgate} title="ResearchGate" className="member-link">
-                    <i className="fab fa-researchgate"></i>
+                    <FontAwesomeIcon icon={faResearchgate} />
                   </a>
                   <a href={member.links.linkedin} title="LinkedIn" className="member-link">
-                    <i className="fab fa-linkedin"></i>
+                    <FontAwesomeIcon icon={faLinkedin} />
                   </a>
                 </div>
               </div>
