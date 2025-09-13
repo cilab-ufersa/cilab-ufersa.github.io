@@ -16,9 +16,7 @@ function Header() {
         <nav className="nav">
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="#what-we-use">O que Usamos</a></li>
             <li><a href="#projects">Projetos</a></li>
-            <li><a href="#libras">Projeto Libras</a></li>
             <li><a href="#publications">Publicações</a></li>
             <li><a href="#team">Equipe</a></li>
             <li><a href="#contact">Contato</a></li>

@@ -41,16 +41,19 @@ function HomePage() {
       title: "Língua de Sinais Brasileira (Libras)",
       description: "Desenvolvimento de sistemas de reconhecimento e tradução de Libras usando técnicas de visão computacional e aprendizado de máquina para promover a inclusão de pessoas surdas.",
       icon: faHandsHelping,
+      link: "#libras",
     },
     {
       title: "Detecção de Patologias em Edificações com IA",
       description: "Aplicação de algoritmos de deep learning para identificar fissuras, rachaduras e outras patologias estruturais em edificações através de análise de imagens.",
       icon: faBuilding,
+      link: null,
     },
     {
       title: "Saúde e Bem-estar Feminino",
       description: "Desenvolvimento de soluções inteligentes para monitoramento e predição de aspectos relacionados à saúde feminina, incluindo ciclos menstruais e condições endócrinas.",
       icon: faHeart,
+      link: null,
     },
   ];
 
@@ -77,13 +80,7 @@ function HomePage() {
     <div className="home-page-wrapper">
       <HeroSection />
 
-      <InfoSection
-        id="what-we-use"
-        title="Tecnologias e Ferramentas CILAB"
-        description="Nossa abordagem em IA é sustentada por uma infraestrutura robusta e o uso das mais modernas tecnologias e frameworks."
-        cards={whatWeUseCards}
-        isAlternate={true}
-      />
+      
 
       <InfoSection
         id="projects"
