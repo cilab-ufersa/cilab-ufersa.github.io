@@ -1,4 +1,3 @@
-// src/pages/PublicationsPage.jsx
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -8,7 +7,6 @@ function PublicationsPage() {
   const [selectedYear, setSelectedYear] = useState('all');
 
   const publications = [
-    // 2025 Publications
     {
       year: 2025,
       title: "Machine learning approaches for efficient recognition of Brazilian Sign Language",
@@ -31,7 +29,7 @@ function PublicationsPage() {
       tags: ["Deep Learning", "Visão Computacional", "Engenharia"]
     },
 
-    // 2024 Publications
+    
     {
       year: 2024,
       title: "Thyroid Syndrome Detection using Machine Learning Algorithms: A Comparative Analysis",
@@ -110,7 +108,7 @@ function PublicationsPage() {
       tags: ["Deep Learning", "Visão Computacional", "Segmentação"]
     },
 
-    // 2023 Publications
+    
     {
       year: 2023,
       title: "Diagnostic Support System for Euthyroid Sick Syndrome based on Machine Learning Algorithms Approaches",
@@ -177,10 +175,7 @@ function PublicationsPage() {
     return tagMap[tag] || 'tag-default';
   };
 
-  const highlightAuthor = (authorString) => {
-    // Remove highlighting - just return the original string
-    return authorString;
-  };
+  const highlightAuthor = (authorString) => authorString;
 
   const groupedPublications = filteredPublications.reduce((acc, pub) => {
     if (!acc[pub.year]) {
@@ -208,7 +203,7 @@ function PublicationsPage() {
       <section className="publications-section">
         <div className="container">
           
-          {/* Filter buttons */}
+          
           <div className="filter-container">
             <div className="filter-buttons">
               <button 
@@ -238,7 +233,7 @@ function PublicationsPage() {
             </div>
           </div>
 
-          {/* Publications list */}
+          
           <div className="publications-container">
             {years.map(year => (
               <div key={year} className="year-section">
@@ -266,7 +261,7 @@ function PublicationsPage() {
             ))}
           </div>
 
-          {/* Statistics Section */}
+          
           <div className="statistics-section">
             <div className="stats-grid">
               <div className="stat-box">

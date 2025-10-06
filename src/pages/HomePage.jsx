@@ -5,14 +5,9 @@ import TeamSection from '../components/TeamSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
-// Importações dos ícones para usar nos dados dos cards
 import { faCode, faDatabase, faCloud, faLaptopCode, faShareNodes, faAtom, faLightbulb, faEye, faChartBar, faHandsHelping, faBuilding, faHeart } from '@fortawesome/free-solid-svg-icons';
 
-// Se HomePage.css estiver vazio, você pode comentar ou remover a linha abaixo.
-// import './HomePage.css';
-
 function HomePage() {
-  // Dados para as seções InfoSection (passados como props)
   const whatWeUseCards = [
     {
       title: "Machine Learning",
@@ -57,7 +52,6 @@ function HomePage() {
     },
   ];
 
-  // <<-- AQUI ESTÁ O NOVO CONTEÚDO -->>
   const researchFocusCards = [
     {
       title: "Machine Learning & Deep Learning",

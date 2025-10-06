@@ -1,4 +1,3 @@
-// src/components/Typewriter.jsx
 import React, { useState, useEffect } from 'react';
 
 const Typewriter = ({ texts, typingSpeed = 150, deletingSpeed = 75, delayBetweenTexts = 1000 }) => {
@@ -8,7 +7,6 @@ const Typewriter = ({ texts, typingSpeed = 150, deletingSpeed = 75, delayBetween
   const [charIndex, setCharIndex] = useState(0);
   const [isBlinking, setIsBlinking] = useState(true);
 
-  // Effect for typing/deleting animation
   useEffect(() => {
     const currentText = texts[textIndex];
 
@@ -23,7 +21,6 @@ const Typewriter = ({ texts, typingSpeed = 150, deletingSpeed = 75, delayBetween
     };
 
     let timer;
-    // Ajuste aqui para usar a variável local 'currentText'
     if (!isDeleting && charIndex < currentText.length) {
       timer = setTimeout(handleType, typingSpeed);
     } else if (isDeleting && charIndex > 0) {
@@ -42,7 +39,6 @@ const Typewriter = ({ texts, typingSpeed = 150, deletingSpeed = 75, delayBetween
     return () => clearTimeout(timer);
   }, [charIndex, isDeleting, textIndex, texts, typingSpeed, deletingSpeed, delayBetweenTexts]);
 
-  // Effect for blinking cursor
   useEffect(() => {
     const blinkInterval = setInterval(() => {
       setIsBlinking(prev => !prev);

@@ -1,22 +1,18 @@
-// src/components/HeroSection.jsx
 import React from 'react';
 import './HeroSection.css';
 import Typewriter from './Typewriter';
-// <<-- CONFIRME O NOME DO ARQUIVO E A EXTENSÃO AQUI! -->>
-import HeroIllustration from '../assets/cilab.png'; // Exemplo: ajuste se for .svg ou .jpg
+import HeroIllustration from '../assets/cilab.png';
 
 function HeroSection() {
   const heroTexts = [
     "Computational Intelligence Laboratory",
-    "Advancing Deep Learning Frontiers",            // Foco na Pesquisa de Ponta
+    "Advancing Deep Learning Frontiers",
     "Building Tomorrow's Intelligent World"
   ];
 
   return (
     <section className="hero-section">
-      {/* Container principal para o layout lado a lado */}
       <div className="container hero-content-wrapper">
-        {/* Wrapper para o texto (título, subtítulo, botões) */}
         <div className="hero-text-content">
           <h1 className="hero-title">
             <Typewriter texts={heroTexts} />
@@ -33,7 +29,6 @@ function HeroSection() {
             </a>
           </div>
         </div>
-        {/* Wrapper para a imagem */}
         <div className="hero-illustration-wrapper">
           <img src={HeroIllustration} alt="Ilustração de IA e Dado Mágico do CILAB" className="hero-illustration" />
         </div>

@@ -1,57 +1,53 @@
-/* src/components/Header.css */
 .header {
-  background-color: var(--color-background-light); /* Fundo branco para o cabeçalho */
-  border-bottom: 1px solid var(--color-border); /* Linha sutil na parte inferior */
-  padding: var(--spacing-md) 0; /* Padding vertical */
-  position: sticky; /* Fixa o cabeçalho no topo ao rolar */
+  background-color: var(--color-background-light);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--spacing-md) 0;
+  position: sticky;
   top: 0;
-  z-index: 1000; /* Garante que fique acima de outros elementos */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* O padding lateral já é dado pelo .container global. Ajuste se necessário. */
-  padding: 0 var(--spacing-md); /* Apenas para alinhar com o conteúdo principal */
+  padding: 0 var(--spacing-md);
 }
 
 .header .logo {
-  font-weight: 700; /* Negrito */
-  font-size: var(--font-size-lg); /* Tamanho maior para a logo */
-  color: var(--color-cilab-primary); /* Cor primária para o texto da logo */
-  display: flex; /* Para alinhar o texto com um possível ícone */
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  color: var(--color-cilab-primary);
+  display: flex;
   align-items: center;
-  gap: var(--spacing-sm); /* Espaço entre ícone e texto */
+  gap: var(--spacing-sm);
 }
 
 .header .logo-icon {
-    height: 30px; /* Tamanho do ícone da logo */
+  height: 30px;
     width: auto;
 }
 
 .header .nav ul {
   list-style: none;
   display: flex;
-  gap: var(--spacing-lg); /* Espaçamento entre os itens do menu */
+  gap: var(--spacing-lg);
 }
 
 .header .nav a {
-  color: var(--color-text-dark); /* Texto do menu escuro */
+  color: var(--color-text-dark);
   font-weight: 500;
   transition: color 0.3s ease;
-  padding: var(--spacing-xs) var(--spacing-sm); /* Para aumentar a área clicável */
+  padding: var(--spacing-xs) var(--spacing-sm);
 }
 
 .header .nav a:hover {
-  color: var(--color-cilab-primary); /* Hover com a cor primária */
+  color: var(--color-cilab-primary);
 }
 
-/* Responsividade para o menu */
 @media (max-width: 768px) {
     .header .nav {
-        display: none; /* Esconde o menu de navegação em telas menores */
-        /* Futuramente, podemos adicionar um botão de hambúrguer para mostrar/esconder */
+        display: none;
     }
 }

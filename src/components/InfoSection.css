@@ -1,11 +1,9 @@
-/* src/components/InfoSection.css */
-
 .info-section {
   padding: var(--spacing-xl) 0;
 }
 
 .info-section.alternate-bg {
-    background-color: var(--color-background-off-white);
+  background-color: var(--color-background-off-white);
 }
 
 .section-title {
@@ -27,7 +25,7 @@
 
 .info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-lg);
   margin-top: var(--spacing-lg);
 }
@@ -37,104 +35,18 @@
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: var(--spacing-lg);
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.info-card.clickable {
-  cursor: pointer;
-}
-
-.info-card.clickable:hover {
-  border-color: var(--color-cilab-primary);
-}
-
-.info-card.clickable h3 {
-  color: var(--color-cilab-primary);
-}
-
-.info-card h3 {
-  color: var(--color-cilab-secondary);
-  font-size: var(--font-size-h4);
-  margin-bottom: var(--spacing-sm);
-}
-
-.info-card p {
-  font-size: var(--font-size-base);
-  color: var(--color-text-dark);
-}
-
-/* Responsividade para InfoSection */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: var(--font-size-h3);
-    }
-    .section-description {
-        font-size: var(--font-size-base);
-    }
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.info-section {
-  padding: var(--spacing-xl) 0;
-}
-
-.info-section.alternate-bg {
-  background-color: var(--color-background-off-white); /* Mantenha o fundo claro */
-}
-
-.section-title {
-  text-align: center;
-  font-size: var(--font-size-h2);
-  color: var(--color-text-dark);
-  margin-bottom: var(--spacing-md);
-}
-
-.section-description {
-  text-align: center;
-  font-size: var(--font-size-lg);
-  color: var(--color-text-grey);
-  margin-bottom: var(--spacing-xl);
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste a largura mínima dos cards */
-  gap: var(--spacing-lg);
-  margin-top: var(--spacing-lg);
-}
-
-.info-card {
-  background-color: var(--color-background-light);
-  border: 1px solid var(--color-border); /* Borda clara */
-  border-radius: 8px;
-  padding: var(--spacing-lg);
-  text-align: left; /* Alinhar o conteúdo do card à esquerda */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease;
 }
 
 .info-card:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra um pouco mais forte no hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card-icon {
-  font-size: 2em; /* Tamanho dos ícones */
-  color: var(--color-cilab-primary); /* Cor primária para os ícones */
+  font-size: 2em;
+  color: var(--color-cilab-primary);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -142,9 +54,9 @@
   color: var(--color-text-dark);
   font-size: var(--font-size-h4);
   margin-bottom: var(--spacing-xs);
-  display: flex; /* Alinhar título e seta */
+  display: flex;
   align-items: center;
-  justify-content: space-between; /* Espaço entre título e seta */
+  justify-content: space-between;
 }
 
 .card-arrow {
@@ -157,7 +69,6 @@
   color: var(--color-text-grey);
 }
 
-/* Responsividade para InfoSection */
 @media (max-width: 768px) {
   .section-title {
     font-size: var(--font-size-h3);
@@ -169,12 +80,12 @@
     grid-template-columns: 1fr;
   }
   .info-card {
-    text-align: center; /* Centralizar em telas menores pode ficar melhor */
+    text-align: center;
   }
   .info-card h3 {
     justify-content: center;
   }
   .card-arrow {
-    margin-left: var(--spacing-sm); /* Adicionar espaço entre título e seta centralizados */
+    margin-left: var(--spacing-sm);
   }
 }
