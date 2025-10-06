@@ -7,9 +7,9 @@ import HeroIllustration from '../assets/cilab.png'; // Exemplo: ajuste se for .s
 
 function HeroSection() {
   const heroTexts = [
-    "Laboratory Inteligency Computacional",
-    "Pioneering AI Solutions",
-    "Shaping Tomorrow's Intelligence"
+    "Computational Intelligence Laboratory",
+    "Advancing Deep Learning Frontiers",            // Foco na Pesquisa de Ponta
+    "Building Tomorrow's Intelligent World"
   ];
 
   return (
