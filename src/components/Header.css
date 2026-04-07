@@ -1,53 +1,78 @@
+/* ─────────────────────────────────────────
+   Header.css — CILab dark
+   Altura fixa 68px — usada no calc() do Hero
+───────────────────────────────────────── */
+
 .header {
-  background-color: var(--color-background-light);
-  border-bottom: 1px solid var(--color-border);
-  padding: var(--spacing-md) 0;
+  background-color: #0D0D0D;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 68px;
+  display: flex;
+  align-items: center;
+  box-shadow: none;
 }
 
+/* sobrescreve padding do .container do global.css */
 .header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 var(--spacing-md);
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 4rem !important;
 }
 
 .header .logo {
-  font-weight: 700;
-  font-size: var(--font-size-lg);
-  color: var(--color-cilab-primary);
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: 8px;
+  text-decoration: none !important;
 }
 
+/* inverte o logo para aparecer no fundo escuro
+   remova o filter se já tiver versão branca do logo */
 .header .logo-icon {
   height: 30px;
-    width: auto;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
 }
 
 .header .nav ul {
   list-style: none;
   display: flex;
-  gap: var(--spacing-lg);
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .header .nav a {
-  color: var(--color-text-dark);
-  font-weight: 500;
-  transition: color 0.3s ease;
-  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.42);
+  font-weight: 400;
+  text-decoration: none !important;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+  padding: 0;
 }
 
 .header .nav a:hover {
-  color: var(--color-cilab-primary);
+  color: rgba(255,255,255,0.9);
+  text-decoration: none !important;
+}
+
+/* último link — Contato — em destaque */
+.header .nav li:last-child a {
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
-    .header .nav {
-        display: none;
-    }
+  .header .nav { display: none; }
+  .header .container { padding: 0 1.5rem !important; }
 }
