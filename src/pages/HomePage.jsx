@@ -1,11 +1,13 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection';
 import InfoSection from '../components/InfoSection';
+import ProjectsSection from '../components/ProjectsSection';
+import ResearchSection from '../components/ResearchSection';
 import TeamSection from '../components/TeamSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
-import { faCode, faDatabase, faCloud, faLaptopCode, faShareNodes, faAtom, faLightbulb, faEye, faChartBar, faHandsHelping, faBuilding, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faDatabase, faCloud, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 
 function HomePage() {
   const whatWeUseCards = [
@@ -31,66 +33,15 @@ function HomePage() {
     },
   ];
 
-  const projectsCards = [
-    {
-      title: "Língua de Sinais Brasileira (Libras)",
-      description: "Desenvolvimento de sistemas de reconhecimento e tradução de Libras usando técnicas de visão computacional e aprendizado de máquina para promover a inclusão de pessoas surdas.",
-      icon: faHandsHelping,
-      link: "#libras",
-    },
-    {
-      title: "Detecção de Patologias em Edificações com IA",
-      description: "Aplicação de algoritmos de deep learning para identificar fissuras, rachaduras e outras patologias estruturais em edificações através de análise de imagens.",
-      icon: faBuilding,
-      link: null,
-    },
-    {
-      title: "Saúde e Bem-estar Feminino",
-      description: "Desenvolvimento de soluções inteligentes para monitoramento e predição de aspectos relacionados à saúde feminina, incluindo ciclos menstruais e condições endócrinas.",
-      icon: faHeart,
-      link: null,
-    },
-  ];
-
-  const researchFocusCards = [
-    {
-      title: "Machine Learning & Deep Learning",
-      description: "Desenvolvemos algoritmos e modelos avançados de aprendizado de máquina, incluindo redes neurais profundas, para resolver problemas complexos.",
-      icon: faAtom,
-    },
-    {
-      title: "Visão Computacional & Processamento de Imagens",
-      description: "Trabalhamos com técnicas avançadas de processamento e análise de imagens, como detecção de objetos, reconhecimento facial e análise de vídeo.",
-      icon: faEye,
-    },
-    {
-      title: "Ciência de Dados & Big Data Analytics",
-      description: "Aplicamos metodologias avançadas para extração de conhecimento a partir de grandes volumes de dados e análise estatística para apoiar a tomada de decisão.",
-      icon: faChartBar,
-    },
-  ];
-
   return (
     <div className="home-page-wrapper">
       <HeroSection />
 
       
 
-      <InfoSection
-        id="projects"
-        title="Projetos do Laboratório"
-        description="Conheça os principais projetos desenvolvidos pelo CiLab, aplicando Inteligência Computacional para resolver problemas reais da sociedade."
-        cards={projectsCards}
-        isAlternate={false}
-      />
+      <ProjectsSection />
 
-      <InfoSection
-        id="research-focus"
-        title="Nossas Áreas de Pesquisa"
-        description="Desenvolvemos pesquisas avançadas em Inteligência Computacional, oferecendo soluções inovadoras para desafios complexos em diversas áreas. Nossa equipe qualificada atua nas seguintes especialidades:"
-        cards={researchFocusCards}
-        isAlternate={true}
-      />
+      <ResearchSection />
 
       <TeamSection />
 
