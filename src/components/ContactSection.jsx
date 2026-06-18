@@ -1,9 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faEnvelope,
   faLocationDot,
-  faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import './ContactSection.css';
@@ -29,30 +27,10 @@ function ContactSection() {
               Tem uma ideia, projeto ou interesse em pesquisa? Estamos abertos a
               parcerias acadêmicas, orientações e colaborações com a indústria.
             </p>
-
-            <a href="mailto:contato@cilab.ufersa.edu.br" className="contact-cta">
-              Enviar e-mail
-              <FontAwesomeIcon icon={faArrowRight} />
-            </a>
           </div>
 
           <div className="contact-right">
             <ul className="contact-list">
-              <li className="contact-item">
-                <span className="contact-item-icon">
-                  <FontAwesomeIcon icon={faEnvelope} />
-                </span>
-                <div className="contact-item-body">
-                  <span className="contact-item-label">E-mail</span>
-                  <a
-                    href="mailto:contato@cilab.ufersa.edu.br"
-                    className="contact-item-value"
-                  >
-                    contato@cilab.ufersa.edu.br
-                  </a>
-                </div>
-              </li>
-
               <li className="contact-item">
                 <span className="contact-item-icon">
                   <FontAwesomeIcon icon={faLocationDot} />
@@ -60,7 +38,7 @@ function ContactSection() {
                 <div className="contact-item-body">
                   <span className="contact-item-label">Localização</span>
                   <span className="contact-item-value">
-                    UFERSA · Campus Mossoró<br />
+                    UFERSA · Campus Pau dos Ferros<br />
                     Rio Grande do Norte, Brasil
                   </span>
                 </div>
@@ -90,10 +68,12 @@ function ContactSection() {
                 <div className="contact-item-body">
                   <span className="contact-item-label">LinkedIn</span>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/company/85629117/"
+                    target="_blank"
+                    rel="noreferrer"
                     className="contact-item-value"
                   >
-                    /company/cilab-ufersa
+                    linkedin.com/company/cilab
                   </a>
                 </div>
               </li>

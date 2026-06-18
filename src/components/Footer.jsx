@@ -33,7 +33,13 @@ function Footer() {
               >
                 <FontAwesomeIcon icon={faGithub} />
               </a>
-              <a href="#" className="footer-social" aria-label="LinkedIn">
+              <a
+                href="https://www.linkedin.com/company/85629117/"
+                target="_blank"
+                rel="noreferrer"
+                className="footer-social"
+                aria-label="LinkedIn"
+              >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
               <a href="#" className="footer-social" aria-label="Instagram">
@@ -75,12 +81,7 @@ function Footer() {
                     UFERSA
                   </a>
                 </li>
-                <li>Campus Mossoró · RN</li>
-                <li>
-                  <a href="mailto:contato@cilab.ufersa.edu.br">
-                    contato@cilab.ufersa.edu.br
-                  </a>
-                </li>
+                <li>Campus Pau dos Ferros · RN</li>
               </ul>
             </div>
           </nav>

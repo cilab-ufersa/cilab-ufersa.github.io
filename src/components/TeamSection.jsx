@@ -46,6 +46,22 @@ const teamMembers = [
   },
 ];
 
+const collaborators = [
+  { id: 1,  name: 'Ana Beatriz',      image: '/AnaBeatriz.jpg',      link: '#' },
+  { id: 2,  name: 'Ana Kelly',        image: '/AnaKelly.jpg',        link: '#' },
+  { id: 3,  name: 'Andrey Sabino',    image: '/AndreySabino.jpg',    link: '#' },
+  { id: 4,  name: 'Evelyn Cristina',  image: '/EvelynCristina.jpg',  link: '#' },
+  { id: 5,  name: 'Fernanda Rocha',   image: '/FernandaRocha.jpg',   link: '#' },
+  { id: 6,  name: 'Gabriel Paiva',    image: '/gabrielpaiva.png',    link: '#' },
+  { id: 7,  name: 'George',           image: '/George.jpg',          link: '#' },
+  { id: 8,  name: 'Hillary Diniz',    image: '/HillaryDiniz.webp',   link: '#' },
+  { id: 9,  name: 'Iara Raquel',      image: '/IaraRaquel.jpg',      link: '#' },
+  { id: 10, name: 'Letícia Morais',   image: '/LeticiaMorais.jpg',   link: '#' },
+  { id: 11, name: 'Luiz Eduardo',     image: '/LuizEduardo.jpg',     link: '#' },
+  { id: 12, name: 'Midhiã Queiroz',   image: '/MidhiaQueiroz.jpg',   link: '#' },
+  { id: 13, name: 'Pedro Lucas',      image: '/PedroLucas.jpg',      link: '#' },
+];
+
 const FALLBACK_IMG =
   'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMTQxNDE0Ii8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjgwIiByPSIzMCIgZmlsbD0iIzMzMzMzMyIvPgo8cGF0aCBkPSJNNTAgMTcwQzUwIDEzNy45IDc0LjMgMTEyIDEwMCAxMTJTMTUwIDEzNy45IDE1MCAxNzBINTBaIiBmaWxsPSIjMzMzMzMzIi8+Cjwvc3ZnPgo=';
 
@@ -134,6 +150,45 @@ function TeamSection() {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="collab-block">
+          <header className="collab-header">
+            <span className="collab-eyebrow">
+              <span className="collab-eyebrow-line" />
+              COLABORADORES
+            </span>
+            <h3 className="collab-title">
+              Alunos e colaboradores que constroem o <em>CiLab</em>.
+            </h3>
+          </header>
+
+          <div className="collab-grid">
+            {collaborators.map((c) => (
+              <a
+                key={c.id}
+                href={c.link}
+                target={c.link.startsWith('http') ? '_blank' : undefined}
+                rel="noreferrer"
+                className="collab-card"
+              >
+                <div className="collab-photo-wrap">
+                  <img
+                    src={c.image}
+                    alt={`Foto de ${c.name}`}
+                    className="collab-photo"
+                    loading="lazy"
+                    onError={(e) => {
+                      e.target.src = FALLBACK_IMG;
+                    }}
+                  />
+                </div>
+                <div className="collab-info">
+                  <h4 className="collab-name">{c.name}</h4>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>
